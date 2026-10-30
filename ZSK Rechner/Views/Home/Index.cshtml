@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ZSK_Rechner.Models.Tiere>
+
+@{
+    ViewData["Title"] = "Tiere Übersicht";
+}
+
+<div class="container mt-4">
+    <h2>Ziegen-Schafe-Kuh Rechner</h2>
+
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Wert in Euro (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var tier in Model)
+                {
+                    <tr>
+                        <td>@tier.Id</td>
+                        <td>@tier.Name</td>
+                        <td>@tier.WertInEuro.ToString("N2") €</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

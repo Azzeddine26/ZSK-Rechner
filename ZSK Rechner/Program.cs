@@ -1,6 +1,5 @@
 
 using Microsoft.EntityFrameworkCore;
-using ZSK_Rechner.Data;
 using ZSK_Rechner.Models;
 
 namespace ZSK_Rechner
